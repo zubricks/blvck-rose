@@ -18,5 +18,6 @@
 :global([data-theme="light"]) {
   .logo {
     filter: invert(1);
+    fill: red;
   }
 }
