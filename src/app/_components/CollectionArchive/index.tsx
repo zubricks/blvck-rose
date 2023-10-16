@@ -150,18 +150,6 @@ export const CollectionArchive: React.FC<Props> = props => {
       <div ref={scrollRef} className={classes.scrollRef} />
       {!isLoading && error && <Gutter>{error}</Gutter>}
       <Fragment>
-        {showPageRange !== false && (
-          <Gutter>
-            <div className={classes.pageRange}>
-              <PageRange
-                totalDocs={results.totalDocs}
-                currentPage={results.page}
-                collection={relationTo}
-                limit={limit}
-              />
-            </div>
-          </Gutter>
-        )}
         <Gutter>
           <div className={classes.grid}>
             {results.docs?.map((result, index) => {

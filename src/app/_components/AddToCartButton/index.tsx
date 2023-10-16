@@ -36,7 +36,7 @@ export const AddToCartButton: React.FC<{
       className={[
         className,
         classes.addToCartButton,
-        appearance === 'default' && isInCart && classes.green,
+        appearance === 'primary' && isInCart && classes.green,
         !hasInitializedCart && classes.hidden,
       ]
         .filter(Boolean)

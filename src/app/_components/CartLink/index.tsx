@@ -4,6 +4,7 @@ import React, { Fragment, useEffect, useState } from 'react'
 import Link from 'next/link'
 
 import { useCart } from '../../_providers/Cart'
+import { Cart } from '../icons/Cart'
 
 import classes from './index.module.scss'
 
@@ -21,9 +22,11 @@ export const CartLink: React.FC<{
   return (
     <Link className={[classes.cartLink, className].filter(Boolean).join(' ')} href="/cart">
       <Fragment>
-        Cart
+        <Cart />
         {typeof length === 'number' && length > 0 && (
-          <small className={classes.quantity}>({length})</small>
+          <div className={classes.counter}>
+            <small className={classes.quantity}>{length}</small>
+          </div>
         )}
       </Fragment>
     </Link>

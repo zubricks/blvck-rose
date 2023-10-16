@@ -9,6 +9,12 @@
   transition: opacity 100ms linear;
   visibility: visible;
 
+  svg {
+    fill: none;
+    stroke-width: 1px;
+    stroke: black;
+  }
+
   > * {
     text-decoration: none;
   }

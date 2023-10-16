@@ -77,7 +77,7 @@ export const Card: React.FC<{
       <div className={classes.content}>
         {showCategories && hasCategories && (
           <div className={classes.leader}>
-            {showCategories && hasCategories && (
+            {/* {showCategories && hasCategories && (
               <div>
                 {categories?.map((category, index) => {
                   const { title: titleFromCategory } = category
@@ -94,7 +94,7 @@ export const Card: React.FC<{
                   )
                 })}
               </div>
-            )}
+            )} */}
           </div>
         )}
         {titleToUse && (
@@ -103,11 +103,6 @@ export const Card: React.FC<{
               {titleToUse}
             </Link>
           </h4>
-        )}
-        {description && (
-          <div className={classes.body}>
-            {description && <p className={classes.description}>{sanitizedDescription}</p>}
-          </div>
         )}
         {doc && <Price product={doc} />}
       </div>

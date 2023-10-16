@@ -108,6 +108,29 @@ const Products: CollectionConfig = {
               type: 'checkbox',
             },
             {
+              name: 'size',
+              type: 'select',
+              hasMany: true,
+              options: [
+                {
+                  label: 'Small',
+                  value: 'small',
+                },
+                {
+                  label: 'Medium',
+                  value: 'medium',
+                },
+                {
+                  label: 'Large',
+                  value: 'large',
+                },
+                {
+                  label: 'Extra Large',
+                  value: 'extra-large',
+                },
+              ],
+            },
+            {
               name: 'paywall',
               label: 'Paywall',
               type: 'blocks',

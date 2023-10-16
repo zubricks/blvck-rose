@@ -1,7 +1,6 @@
 @import '../../_css/queries.scss';
 
 .hero {
-  padding-top: calc(var(--base) * 2);
   position: relative;
   overflow: hidden;
 
@@ -10,10 +9,14 @@
   }
 }
 
+.button {
+  background: white;
+  color: black;
+  margin-left: auto;
+}
+
 .media {
-  width: calc(100% + var(--gutter-h));
-  left: calc(var(--gutter-h) / -2);
-  margin-top: calc(var(--base) * 3);
+  width: 100%;
   position: relative;
 
   @include mid-break {
@@ -51,5 +54,19 @@
 }
 
 .content {
-  position: relative;
+  background: rgba(0,0,0, .6);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  padding-top: calc(var(--base) / 2);
+  padding-bottom: calc(var(--base) / 2);
+  position: absolute;
+  bottom: 0;
+  z-index: 2;
+  color: white;
+
+  ul {
+    padding-top: 0;
+  }
 }

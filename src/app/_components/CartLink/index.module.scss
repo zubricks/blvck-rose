@@ -1,9 +1,27 @@
 .cartLink {
+  color: white;
+  font-size: 8px;
   cursor: pointer;
   display: flex;
   align-items: center;
+  position: relative;
+}
+
+.counter {
+  position: absolute;
+  right: -4px;
+  top: 2px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+  background: red;
+  width: calc(var(--base) / 2);
+  height: calc(var(--base) / 2);
+  border-radius: 50%;
 }
 
 .quantity {
-  margin-left: 2px;
+  z-index: 2;
+  color: white;
 }

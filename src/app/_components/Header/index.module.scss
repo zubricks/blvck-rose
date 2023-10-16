@@ -2,6 +2,10 @@
 
 .header {
   padding: var(--base) 0;
+  position: sticky;
+  top: 0;
+  z-index: 999999;
+  background-color: rgba(255, 255, 255, 0.6);
 }
 
 .wrap {
@@ -12,12 +16,11 @@
 }
 
 .logo {
-  width: 150px;
+  width: 200px;
 }
 
 :global([data-theme="light"]) {
   .logo {
-    filter: invert(1);
-    fill: red;
+    //filter: invert(1);
   }
 }

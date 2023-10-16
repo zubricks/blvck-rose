@@ -42,6 +42,8 @@
 }
 
 .price {
+  width: 100%;
+  color: red;
   font-weight: 600;
   margin: 0;
 }
@@ -70,7 +72,7 @@
 }
 
 .image {
-  object-fit: cover;
+  position: relative !important;
 }
 
 .placeholder {
