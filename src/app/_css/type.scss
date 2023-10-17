@@ -1,6 +1,5 @@
 @use 'queries' as *;
 
-%h1,
 %h2,
 %h3,
 %h4,
@@ -12,8 +11,9 @@
 %h1 {
   margin: 40px 0;
   font-size: 64px;
+  font-weight: normal;
   line-height: 70px;
-  font-weight: bold;
+  font-family: 'Libre Baskerville', serif;
 
   @include mid-break {
     margin: 24px 0;

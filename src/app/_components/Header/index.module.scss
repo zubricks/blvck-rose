@@ -19,7 +19,10 @@
   width: 200px;
 }
 
-:global([data-theme="light"]) {
+:global([data-theme="dark"]) {
+  .header {
+    background: transparent;
+  }
   .logo {
     //filter: invert(1);
   }
