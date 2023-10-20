@@ -21,6 +21,8 @@ export interface Config {
     categories: Category
     users: User
     redirects: Redirect
+    forms: Form
+    'form-submissions': FormSubmission
     'payload-preferences': PayloadPreference
     'payload-migrations': PayloadMigration
   }
@@ -414,6 +416,129 @@ export interface User {
   loginAttempts?: number
   lockUntil?: string
   password?: string
+}
+
+export interface Form {
+  id: string
+  title: string
+  fields?: (
+    | {
+        name: string
+        label?: string
+        width?: number
+        defaultValue?: string
+        required?: boolean
+        id?: string
+        blockName?: string
+        blockType: 'text'
+      }
+    | {
+        name: string
+        label?: string
+        width?: number
+        defaultValue?: string
+        required?: boolean
+        id?: string
+        blockName?: string
+        blockType: 'textarea'
+      }
+    | {
+        name: string
+        label?: string
+        width?: number
+        defaultValue?: string
+        options: {
+          label: string
+          value: string
+          id?: string
+        }[]
+        required?: boolean
+        id?: string
+        blockName?: string
+        blockType: 'select'
+      }
+    | {
+        name: string
+        label?: string
+        width?: number
+        required?: boolean
+        id?: string
+        blockName?: string
+        blockType: 'email'
+      }
+    | {
+        name: string
+        label?: string
+        width?: number
+        required?: boolean
+        id?: string
+        blockName?: string
+        blockType: 'state'
+      }
+    | {
+        name: string
+        label?: string
+        width?: number
+        required?: boolean
+        id?: string
+        blockName?: string
+        blockType: 'country'
+      }
+    | {
+        name: string
+        label?: string
+        width?: number
+        defaultValue?: number
+        required?: boolean
+        id?: string
+        blockName?: string
+        blockType: 'number'
+      }
+    | {
+        name: string
+        label?: string
+        width?: number
+        required?: boolean
+        defaultValue?: boolean
+        id?: string
+        blockName?: string
+        blockType: 'checkbox'
+      }
+    | {
+        message?: {
+          [k: string]: unknown
+        }[]
+        id?: string
+        blockName?: string
+        blockType: 'message'
+      }
+  )[]
+  submitButtonLabel?: string
+  confirmationType?: 'message' | 'redirect'
+  confirmationMessage: {
+    [k: string]: unknown
+  }[]
+  redirect?: {
+    url: string
+  }
+  emails: {
+    emailTo?: string
+    cc?: string
+    bcc?: string
+    replyTo?: string
+    emailFrom?: string
+    subject: string
+    message?: {
+      [k: string]: unknown
+    }[]
+    id?: string
+  }[]
+  leader: {
+    [k: string]: unknown
+  }[]
+  hubSpotFormID?: string
+  updatedAt: string
+  createdAt: string
 }
 export interface Redirect {
   id: string

@@ -77,7 +77,7 @@ export const Card: React.FC<{
       <div className={classes.content}>
         {showCategories && hasCategories && (
           <div className={classes.leader}>
-            {/* {showCategories && hasCategories && (
+            {showCategories && hasCategories && (
               <div>
                 {categories?.map((category, index) => {
                   const { title: titleFromCategory } = category
@@ -85,7 +85,7 @@ export const Card: React.FC<{
                   const categoryTitle = titleFromCategory || 'Untitled category'
 
                   const isLast = index === categories.length - 1
-
+                  console.log(category)
                   return (
                     <Fragment key={index}>
                       {categoryTitle}
@@ -94,7 +94,7 @@ export const Card: React.FC<{
                   )
                 })}
               </div>
-            )} */}
+            )}
           </div>
         )}
         {titleToUse && (

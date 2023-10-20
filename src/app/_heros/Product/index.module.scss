@@ -62,6 +62,8 @@
 
   img {
     position: relative !important;
+    inset: initial !important;
+    right: -25% !important;
   }
 
   @include mid-break {
