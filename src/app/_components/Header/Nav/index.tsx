@@ -29,15 +29,16 @@ export const HeaderNav: React.FC<{ header: HeaderType }> = ({ header }) => {
       {navItems.map(({ link }, i) => {
         return <CMSLink key={i} {...link} appearance="none" />
       })}
+
       <CartLink />
       {user && (
-        <Link href="/account">
+        <Link className={classes.icon} href="/account">
           <Account />
         </Link>
       )}
       {!user && (
         <React.Fragment>
-          <Link href="/login">
+          <Link className={classes.icon} href="/login">
             <Account />
           </Link>
         </React.Fragment>

@@ -52,4 +52,13 @@
   bottom: var(--base);
   z-index: 2;
   color: white;
+
+  h1 {
+    position: realtive;
+    margin-bottom: 0;
+
+    span {
+      background: black;
+    }
+  }
 }

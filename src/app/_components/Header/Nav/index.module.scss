@@ -18,6 +18,40 @@
   > * {
     text-decoration: none;
   }
+
+  a {
+    font-family: 'Roboto Mono', monospace !important;
+    border-radius: 0;
+    text-transform: uppercase !important;
+    font-size: 14px;
+    position: relative;
+
+    &:after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      height: 2px;
+      background-color: #bd1e2d;
+      visibility: hidden;
+      will-change: visibility;
+
+    }
+
+    &:hover {
+      &::after {
+        transition:  all 1s ease-in;
+        visibility: visible;
+      }
+    }
+  }
+
+  .icon {
+
+    &:after {
+      display: none;
+    }
+  }
 }
 
 .hide {

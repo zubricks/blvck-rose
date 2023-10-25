@@ -2,22 +2,15 @@
 
 %h2,
 %h3,
-%h4,
-%h5,
-%h6 {
-  font-weight: 700;
-}
-
-%h2,
-%h3 {
+%h4 {
   font-family: 'Libre Baskerville', serif;
 }
 
 %h1 {
   margin: 40px 0;
-  font-size: 64px;
+  font-size: 85px;
   font-weight: normal;
-  line-height: 70px;
+  line-height: 105px;
   font-family: 'Libre Baskerville', serif;
 
   @include mid-break {
@@ -43,7 +36,6 @@
   margin: 24px 0;
   font-size: 32px;
   line-height: 40px;
-  text-transform: uppercase;
 
   @include mid-break {
     margin: 20px 0;
@@ -54,7 +46,7 @@
 
 %h4 {
   margin: 20px 0;
-  font-size: 26px;
+  font-size: 22px;
   line-height: 32px;
   font-weight: bold;
 

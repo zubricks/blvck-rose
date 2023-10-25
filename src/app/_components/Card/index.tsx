@@ -75,7 +75,7 @@ export const Card: React.FC<{
         )}
       </Link>
       <div className={classes.content}>
-        {showCategories && hasCategories && (
+        {/* {showCategories && hasCategories && (
           <div className={classes.leader}>
             {showCategories && hasCategories && (
               <div>
@@ -85,7 +85,6 @@ export const Card: React.FC<{
                   const categoryTitle = titleFromCategory || 'Untitled category'
 
                   const isLast = index === categories.length - 1
-                  console.log(category)
                   return (
                     <Fragment key={index}>
                       {categoryTitle}
@@ -96,7 +95,7 @@ export const Card: React.FC<{
               </div>
             )}
           </div>
-        )}
+        )} */}
         {titleToUse && (
           <h4 className={classes.title}>
             <Link href={href} className={classes.titleLink}>
