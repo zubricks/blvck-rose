@@ -5,7 +5,23 @@
   position: sticky;
   top: 0;
   z-index: 999999;
-  background-color: rgba(255, 255, 255, 0.6);
+
+   .logo {
+    svg {
+      width: calc(var(--base) * 9);
+      path:nth-child(2) {
+        stroke: black;
+      }
+
+      path:nth-child(3) {
+        fill: #BE1E2D;
+      }
+
+      path:nth-child(4) {
+        fill: #70A578;
+      }
+    }
+   }
 }
 
 .wrap {
@@ -15,12 +31,28 @@
   gap: calc(var(--base) / 2) var(--base);
 }
 
-.logo {
-  width: 200px;
-}
-
 :global([data-theme="dark"]) {
   .header {
-    background: white;
+    background: #141414;
+    .logo {
+      svg {
+        path:nth-child(1) {
+          fill: white;
+        }
+      }
+    }
   }
+}
+
+:global([data-theme="light"]) {
+ .header {
+  background: white;
+  .logo {
+    svg {
+      path:nth-child(1) {
+        fill: black;
+      }
+    }
+  }
+ }
 }

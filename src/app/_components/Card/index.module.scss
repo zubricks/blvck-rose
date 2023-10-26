@@ -76,11 +76,18 @@
   text-decoration: none;
   display: block;
   position: relative;
-  aspect-ratio: 16 / 9;
+  overflow: hidden;
+
+  &:hover {
+    img {
+      transform: scale(1.5); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+    }
+  }
 }
 
 .image {
   position: relative !important;
+  transition: transform .2s; /* Animation */
 }
 
 .placeholder {

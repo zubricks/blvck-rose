@@ -5,6 +5,7 @@ import { Footer } from '../../../payload/payload-types'
 import { fetchFooter, fetchGlobals } from '../../_api/fetchGlobals'
 import { ThemeSelector } from '../../_providers/Theme/ThemeSelector'
 import { Gutter } from '../Gutter'
+import { Logo } from '../icons/Logo'
 import { CMSLink } from '../Link'
 
 import classes from './index.module.scss'
@@ -27,13 +28,9 @@ export async function Footer() {
     <footer className={classes.footer}>
       <Gutter className={classes.wrap}>
         <Link href="/">
-          <picture>
-            <img
-              className={classes.logo}
-              alt="Payload Logo"
-              src="https://raw.githubusercontent.com/zubricks/blvck-rose/main/public/br-logo.svg"
-            />
-          </picture>
+          <div className={classes.logo}>
+            <Logo />
+          </div>
         </Link>
         <nav className={classes.nav}>
           <ThemeSelector />

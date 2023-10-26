@@ -8,6 +8,27 @@
   @include small-break {
     padding: calc(var(--base) * 2) 0;
   }
+
+  .logo {
+    svg {
+      width: calc(var(--base) * 9);
+      path:nth-child(1) {
+        fill: white;
+      }
+
+      path:nth-child(2) {
+        stroke: black;
+      }
+
+      path:nth-child(3) {
+        fill: #BE1E2D;
+      }
+
+      path:nth-child(4) {
+        fill: #70A578;
+      }
+    }
+   }
 }
 
 :global([data-theme="dark"]) {
